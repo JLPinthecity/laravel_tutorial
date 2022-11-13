@@ -1,3 +1,10 @@
+@extends('layout')
+
+
+@section('content')
+
+@include('partials._hero')
+@include('partials._search')
 <h1>{{$heading}}</h1>
 
 
@@ -11,3 +18,5 @@
     </p>
 
 @endforeach
+
+@endsection
