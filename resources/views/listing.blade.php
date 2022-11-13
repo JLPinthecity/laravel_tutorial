@@ -1,4 +1,5 @@
 
+
 @extends('layout')
 
 
@@ -7,7 +8,9 @@
        {{$listing['title']}}
     </h2>
     <p>
-        {{$listing['description']}}
+        {{$listing['company']}}
     </p>
+
+    <x-listing-tags :tagsCsv="$listing->tags"/>
 
 @endsection
