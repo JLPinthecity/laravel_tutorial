@@ -30,19 +30,12 @@ Route::get('/search', function (Request $request) {
 
 
 //all listings
-Route::get('/', function () {
-    return view('listings', [
-        'heading' => 'Latest Listings',
-        'listings' => Listing::all()
-    ]);
-});
+Route::get('/', [ListingController::class, 'index']);
 
 //single listing
-Route::get('/listings/{listing}', function (Listing $listing) {
+Route::get('/listings/{listing}', [ListingController::class, 'show']) {
 
-    return view('listing', [
-        'listing' => $listing
-    ]);
+
 
     // $listing = Listing::find($id);
 
